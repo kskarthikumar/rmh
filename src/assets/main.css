@@ -1,0 +1,6 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;500&display=swap');
+body {
+  color: #fff;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
+}
