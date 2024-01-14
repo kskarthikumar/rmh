@@ -1,8 +1,8 @@
 <template>
 	<header>
 		<span class="logo"> 
-																				<img src="../assets/logo.png" alt="logo"/>
-																			</span>
+		<img src="../assets/logo.png" alt="logo"/>
+	</span>
 	</header>
 	<section>
 		<div class="topBanner">
@@ -11,15 +11,11 @@
 					<slide v-for="slide in sliderPath" :key="slide">
 						<div class="sliderImage" :style="{backgroundImage:`url(${slide})`}"></div>
 					</slide>
-					<template #addons>
-																							<navigation />
-</template>
 				</carousel>
 			</div>
 			<div class="bannerBottomContent">
 				<span class="label">Download offical ReserveMyHall App</span>
-				<span class="inputContainer"><input type="text" name="phonenumber" placeholder="Enter Mobile Number"/></span>
-				<span><button>GET APP LINK</button></span>
+				<a href="https://play.google.com/store/apps/details?id=com.reservemyhall" target="_blank"><img src="../assets/playstore.png" alt="playstore"/></a>
 			</div>
 		</div>
 		<div class="infoContent">
@@ -29,7 +25,7 @@
 			</div>
 			<div class="infoContent_video">
 				<iframe width="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-										</iframe>
+				</iframe>
 			</div>
 		</div>
 	</section>
@@ -41,19 +37,19 @@
 				</span>
 				<ul>
 					<li>
-						<a href="#">
-													<img src="../assets/facebook1.webp" alt="image" />
-												</a>
+						<a href="https://www.facebook.com/reservemyhall/" target="_blank">
+							<img src="../assets/facebook1.webp" alt="image" />
+						</a>
 					</li>
 					<li>
-						<a href="#">
-													<img src="../assets/twitter1.webp" alt="image" />
-												</a>
+						<a href="https://twitter.com/reservemyhall/" target="_blank">
+							<img src="../assets/twitter1.webp" alt="image" />
+						</a>
 					</li>
 					<li>
-						<a href="#">
-													<img src="../assets/instagram.webp" alt="image" />
-												</a>
+						<a href="https://www.instagram.com/reservemyhall/" target="_blank">
+							<img src="../assets/instagram.webp" alt="image" />
+						</a>
 					</li>
 				</ul>
 			</div>
@@ -61,7 +57,8 @@
 		<div class="content_right">
 			<div class="contactUs">
 				<p>Have a question or need help? Contact us – we're here for you!</p>
-				<button>Contact Us</button>
+				<p><a href="tel:+919751725776">+91 97517 25776</a></p>
+				<p><a href="mailto:reservemyhall777@gmail.com">reservemyhall777@gmail.com</a></p>
 			</div>
 			<div class="copyRight">
 				<p>CORPORATE OFFICE</p>
@@ -77,23 +74,10 @@
 
 <style scoped>
 header {
-	/* background: radial-gradient(circle, #dddddd54 0%, #dedede70 100%);
-	background-repeat: repeat-x;
-	height: 75px;
-	width: 98%;
-	margin: 10px 1% 0px 1%;
-	border-radius: 10px;
-	display: flex;
-	align-self: center;
-	padding: 10px 20px;
-	justify-content: flex-start;
-	align-items: center; */
-	position: sticky;
-	left: 0;
-	top: 20px;
-	padding-left: 40px;
+	position: fixed;
+	left: 10px;
+	top: 10px;
 	z-index: 99;
-	/* background: radial-gradient( circle farthest-corner at 10% 20%, rgba(100, 43, 115, 1) 0%, rgba(4, 0, 4, 1) 90%); */
 }
 
 span.logo {
@@ -108,16 +92,13 @@ span.logo {
 }
 
 .topBanner {
-	min-height: 600px;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
 	border-bottom: 1px solid;
-	margin-top: -90px
 }
 
 .topBanner {
-	min-height: 450px;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
@@ -127,10 +108,10 @@ span.logo {
 }
 
 .bannerBottomContent {
-	width: 70%;
+	width: 37%;
 	display: flex;
-	min-height: 78px;
-	padding: 20px;
+	min-height: 61px;
+	padding: 15px;
 	background: #fff;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
@@ -139,9 +120,13 @@ span.logo {
 	position: absolute;
 	bottom: 0;
 	margin: 0 auto;
-	left: 15%;
+	left: 32%;
 }
-
+.bannerBottomContent img {
+	width: 150px;
+	padding-left: 15px;
+	padding-top: 6px;
+}
 .bannerBottomContent .label {
 	font-size: 23px;
 	line-height: 26px;
@@ -149,10 +134,6 @@ span.logo {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	text-align: center;
-}
-
-.inputContainer {
-	padding: 0 20px;
 }
 
 .bannerBottomContent input {
@@ -262,13 +243,6 @@ footer {
 	display: flex;
 }
 
-/* .content_right {
-	flex: 1;
-	text-align: left;
-	border-left: 1px solid;
-	padding-left: 60px;
-} */
-
 .leftWrapper {
 	display: flex;
 	flex-direction: column;
@@ -305,7 +279,9 @@ footer {
 .contactUs {
 	height: 100%;
 }
-
+.contactUs a {
+    color: #fff;
+}
 .content_right p {
 	font-size: 16px;
 }
@@ -336,14 +312,25 @@ footer {
 	.sliderImage {
 		height: 290px;
 	}
+	.logo img {
+		width: 60px;
+	}
 	header {
-		position: relative;
+		position: fixed;
 		z-index: 9999999;
-		top: 20px;
-		left: 20px;
+		top: 10px;
+		left: 10px;
 		padding-left: 0
 	}
-	.bannerBottomContent[data-v-c970699f] {
+	.bannerBottomContent .label {
+    font-size: 18px;
+	}
+	.bannerBottomContent img {
+    width: 150px;
+    padding-left: 0;
+    padding-top: 16px;
+	}
+	.bannerBottomContent {
 		width: 97%;
 		height: auto;
 		align-items: center;
@@ -353,12 +340,9 @@ footer {
 		flex-direction: column;
 		border-radius: 4px;
 		margin: 1.5%;
+		left: 0;
 	}
-	.inputContainer {
-		padding: 0;
-		width: 100%;
-		margin: 15px 0;
-	}
+
 	.infoContent_desc,
 	.infoContent_video {
 		max-width: 90%;
@@ -386,7 +370,7 @@ footer {
 		float: none;
 	}
 	.bannerBottomContent input {
-    width: 100%;
+		width: 100%;
 	}
 }
 </style>
